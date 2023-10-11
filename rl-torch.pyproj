@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{f9b870a9-a084-4bd7-917f-eb8e30129412}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>policy_show.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>CondaEnv|CondaEnv|rl-win-torch</InterpreterId>
+    <IsWindowsApplication>False</IsWindowsApplication>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DQN_model.py" />
+    <Compile Include="dqn_replay_buffer.py" />
+    <Compile Include="policy_show.py" />
+    <Compile Include="utils.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="checkpoint\BS512\HD256\output.png" />
+    <Content Include="checkpoint\BS64\HD256\029539e6-9c97-4b9c-86dc-614eebbb6403.png" />
+    <Content Include="checkpoint\BS64\HD64\1\788812c5-e972-4f11-89fb-37506cab6aeb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="checkpoint\" />
+    <Folder Include="checkpoint\BS512\" />
+    <Folder Include="checkpoint\BS512\HD256" />
+    <Folder Include="checkpoint\BS64\" />
+    <Folder Include="checkpoint\BS64\HD256" />
+    <Folder Include="checkpoint\BS64\HD64\" />
+    <Folder Include="checkpoint\BS64\HD64\1" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|rl-win-torch" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>
